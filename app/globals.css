@@ -4,3 +4,10 @@
 body {
   font-family: var(--font-melodrama);
 }
+
+@supports(padding: env(safe-area-inset-top)) {
+  body {
+    background-color: #000 !important;
+    color-scheme: dark;
+  }
+}

@@ -28,6 +28,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Fix Safari top safe-area showing white */}
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      </head>
       <body className={`${melodrama.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
